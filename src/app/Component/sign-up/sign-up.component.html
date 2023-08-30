@@ -1,0 +1,110 @@
+<section class="vh-75">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src=".\assets\Image\Logo.png" class="img-fluid" alt="Sample image" style="width: 650px;height: 200px;">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <form [formGroup]="SignUpform" (ngSubmit)="onSubmit()">
+                    <br>
+                    <!-- Role  input -->
+                    <div class="form-group">
+                        <div *ngIf="Role?.touched && Role?.invalid">
+                            <span>Role is required.</span>
+                        </div>
+                        <input formControlName="Role" type="text" id="Role" class="form-control form-control-lg" placeholder="Role" />
+                        <label class="form-label" for="form3Example3"></label>
+
+                    </div>
+
+                    <!-- User Name input -->
+                    <div class="form-group">
+                        <div *ngIf="FirstName?.touched && FirstName?.invalid">
+                            <span>Firstname is required.</span></div>
+                        <input formControlName="FirstName" type="text" id="FirstName" class="form-control form-control-lg" placeholder="User First Name" />
+                        <label class="form-label" for="form3Example3"></label>
+
+                    </div>
+                    <div class="form-group">
+                        <div *ngIf="LastName?.touched && LastName?.invalid">
+                            <span>Username is required.</span></div>
+                        <input formControlName="LastName" type="text" id="LastName" class="form-control form-control-lg" placeholder="User Last Name" />
+                        <label class="form-label" for="form3Example3"></label>
+
+                    </div>
+
+                    <!-- emailid input -->
+                    <div class="form-group">
+                        <div *ngIf="EmailId?.invalid && EmailId?.touched">
+                            <span>Emailid is invalid.</span></div>
+                        <input formControlName="EmailId" type="email" id="EmailId" class="form-control form-control-lg" placeholder="Enter a valid emailid address" />
+                        <label class="form-label" for="form3Example3"></label>
+
+                    </div>
+
+
+                    <!-- mobilenumber  input -->
+                    <div class="form-group">
+                        <div *ngIf="MobileNumber?.touched && MobileNumber?.invalid">
+                            <span>Enter valid 10-digit mobile number.</span></div>
+                        <input formControlName="MobileNumber" type="text" id="MobileNumber" class="form-control form-control-lg" placeholder="Enter your mobile Number" />
+                        <label class="form-label" for="form3Example3"></label>
+
+                    </div>
+
+                    <!-- AddressInfo  input -->
+                    <div class="form-group">
+                        <div *ngIf="AddressInfo?.touched && AddressInfo?.invalid">
+                            <span>Address is required.</span>
+                        </div>
+                        <input formControlName="AddressInfo" type="text" id="AddressInfo" class="form-control form-control-lg" placeholder="Enter your Address" />
+                        <label class="form-label" for="form3Example3"></label>
+
+                    </div>
+
+                    <!-- City  input -->
+                    <div class="form-group">
+                        <div *ngIf="MobileNumber?.touched && MobileNumber?.invalid">
+                            <span>City is required.</span>
+                        </div>
+                        <input formControlName="City" type="text" id="City" class="form-control form-control-lg" placeholder="Enter your City" />
+                        <label class="form-label" for="form3Example3"></label>
+
+                    </div>
+
+                    <!-- State  input -->
+                    <div class="form-group">
+                        <div *ngIf="MobileNumber?.touched && MobileNumber?.invalid">
+                            <span>State is required.</span>
+                        </div>
+                        <input formControlName="UserState" type="text" id="UserState" class="form-control form-control-lg" placeholder="Enter your State" />
+                        <label class="form-label" for="form3Example3"></label>
+
+                    </div>
+
+                    <!-- Pincode  input -->
+                    <div class="form-group">
+                        <div *ngIf="Pincode?.touched && Pincode?.invalid">
+                            <span>Pincode is required.</span>
+                        </div>
+                        <input formControlName="Pincode" type="text" id="Pincode" class="form-control form-control-lg" placeholder="Enter your Pincode" />
+                        <label class="form-label" for="form3Example3"></label>
+
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-group ">
+                        <div *ngIf="Password?.touched && Password?.invalid">
+                            <span>Password is required.</span></div>
+                        <input formControlName="Password" type="Password" id="Password" class="form-control form-control-lg" placeholder="Enter password" />
+                        <label class="form-label" for="form3Example4"></label>
+                    </div>
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="submit" class="btn btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" [disabled]="!SignUpform.valid">Register</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

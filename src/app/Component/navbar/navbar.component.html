@@ -1,0 +1,28 @@
+<nav *ngIf="nav.visible" class="navbar navbar-expand bg-dark text-light">
+    <div class="container">
+        <div class="navbar-header nav-item">
+
+            <a routerLink="/home"><b> <img src="assets\Image\shopping_cart_PNG36.png" width="35" height="35" class="d-inline-block" alt="" >
+          <span> Shopping</span> <span> Cart </span><span> Cg</span> </b></a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav text-light">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a style="margin-right:20px" routerLink="/login">
+                            <mat-icon>account_circle</mat-icon>Login </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/cart">
+                            <mat-icon>shopping_cart</mat-icon>Cart</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a (click)="onLogout()">&nbsp;&nbsp;&nbsp;
+                            <mat-icon>power_settings_new</mat-icon>LogOut</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

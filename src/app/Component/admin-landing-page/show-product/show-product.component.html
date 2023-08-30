@@ -1,0 +1,31 @@
+<br>
+<h2>Welcome Admin !!!</h2>
+<button style="margin: 50px; padding: 10px" type="button" class="btn btn-primary" routerLink="/edit-product" style="background-color:rgb(0, 90, 0);">Add Product</button>
+<div class="space"></div>
+<button style="margin: 50px; padding: 10px" type="button" class="btn btn-primary" routerLink="/add-edit-product" style="background-color:rgb(0, 90, 0);">Edit Product</button>
+<div *ngIf="!products" class="loader"></div>
+<table data-page-length='5' class="table table-striped" aria-labelledby="tabelLabel">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let products of products">
+            <td>{{products.productId}}</td>
+            <td>{{products.category}}</td>
+            <td>{{products.productName}}</td>
+            <td>{{products.price}}</td>
+            <td><img src="{{products.productImage}}" style="width: 100px;height:100px;" /></td>
+            <td>{{products.description}}</td>
+            <td><button (click)="delete(products.productId)" style="border:none"><mat-icon>delete_sweep</mat-icon></button></td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-danger" (click)="onLogout()">Log Out</button>

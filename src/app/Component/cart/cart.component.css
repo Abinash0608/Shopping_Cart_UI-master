@@ -1,0 +1,33 @@
+.btn-primary {
+    margin-top: 30px;
+}
+
+T {
+    background-color: rgb(0, 90, 0);
+    color: white;
+}
+
+.popup-edit {
+    position: absolute;
+}
+
+.popup-edit-window {
+    border: 1px solid #f2f2f2;
+    box-shadow: 4px 4px 4px #aaa;
+}
+
+.popup-header .popup-edit-window {
+    background: #fff;
+    padding: 10px;
+    color: #003366;
+    font-weight: bold;
+}
+
+.popup-content {
+    padding: 10px;
+    background: #f2f2f2;
+}
+
+.glyphicon-pencil {
+    cursor: pointer;
+}

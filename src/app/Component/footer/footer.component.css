@@ -1,0 +1,67 @@
+.footer {
+    background-color: black;
+    margin-top: 10%;
+}
+
+.footer .footer-content {
+    border: 1px solid;
+    height: 150px;
+    display: flex;
+}
+
+.footer .footer-content .footer-section {
+    flex: 1;
+    padding: 25px;
+    font-size: 15px;
+}
+
+.footer .footer-content h4 {
+    color: white;
+}
+
+.footer .footer-content .about h3 span {
+    color: rgb(61, 221, 239);
+}
+
+.footer .footer-content .Social-media .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.footer .footer-content .Social-media .socials a {
+    border: 1px solid grey;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.footer-content .Social-media .socials a:hover {
+    border: 1px solid #33ff33;
+    color: #33ff33;
+    transition: all .3s;
+}
+
+.footer-content .links ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    transition: all .3s;
+}
+
+.footer .footer-content .links ul a:hover {
+    color: #33ff33;
+    margin-left: 15px;
+    transition: all .3s;
+}
+
+a {
+    color: beige;
+    text-decoration: none;
+}

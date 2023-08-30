@@ -1,0 +1,37 @@
+<br><br><br>
+<h1 aria-hidden="true"> Order Table</h1>
+<div class="container table-responsive py-5">
+
+    <table id="purchaseOrderDiv" class="table table-striped" aria-labelledby="tablelabel">
+        <thead class="thead-dark">
+
+            <th scope="col">Cart Id</th>
+            <th scope="col">Product Id</th>
+            <th scope="col">Product Name</th>
+            <!-- <th scope="col">Product Image</th> -->
+            <th scope="col">Product Quantity</th>
+            <th scope="col"> Total Price</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let od of order">
+
+                <td>{{od.cartId}}</td>
+                <td>{{od.productId}}</td>
+                <td>{{od.productName}}</td>
+                <!-- <td> <img [src]="od.productImage" width="50" height="50"> </td> -->
+                <td> {{ od.quantity }} </td>
+                <td>{{od.price*od.quantity| currency :'INR'}}</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td> Total Amount : </td>
+                <td>{{grandTotal() | currency :'INR'}}</td>
+            </tr>
+            <!-- <button class="btn-success">Place Order</button> -->
+
+        </tbody>
+    </table>
+    <button routerLink="/payment" style="margin: 50px; padding: 10px" type="button" class="btn btn-primary" style="background-color:rgb(0, 90, 0);">Place Order</button>
+    <div class="space"></div>
+    <button (click)="printPurchaseOrder()" style="margin: 50px; padding: 10px" type="button" class="btn btn-primary" style="background-color:rgb(0, 90, 0);">Download Bill</button>
+</div>
